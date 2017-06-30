@@ -57,7 +57,7 @@ def _win_path_to_bytes(path):
             return path.encode(encoding)
         except (UnicodeEncodeError, LookupError):
             pass
-    raise Exception('Unables to encode path {} into byte string'.format(path))
+    return path
 
 
 if 'darwin' in sys.platform:
